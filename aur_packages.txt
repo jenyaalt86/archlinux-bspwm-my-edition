@@ -1,0 +1,4 @@
+google-chrome
+visual-studio-code-bin
+polybar
+xfce-polkit

@@ -1,0 +1,67 @@
+# BASE
+xorg-server
+xorg-xbacklight
+xorg-xrandr
+xorg-xsetroot
+xorg-xkill
+xorg-xinput
+xorg-xdpyinfo
+xorg-xinit
+
+ibus 
+dconf-editor 
+
+bspwm
+sxhkd
+rofi
+picom
+nitrogen
+dunst
+lxappearance-gtk3
+neofetch
+vim
+reflector
+base-devel
+bash-completion
+linux-headers
+numlockx
+volumeicon
+
+# THEME
+adapta-gtk-theme
+
+# ICON THEME
+papirus-icon-theme
+
+# Terminal
+xfce4-terminal
+
+# FILE MANAGER
+thunar
+thunar-volman
+thunar-archive-plugin
+thunar-media-tags-plugin
+file-roller
+
+# NETWORK
+networkmanager
+network-manager-applet
+
+# Bluetooth
+pulseaudio-bluetooth
+bluez
+bluez-utils
+blueberry
+
+# SOUND
+pulseaudio
+pulseaudio-alsa
+pavucontrol
+
+# FONTS
+# ttf-font-awesome
+# ttf-ubuntu-font-family
+noto-fonts
+
+# LAPTOP
+tlp
