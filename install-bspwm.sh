@@ -81,7 +81,7 @@ function install_packages(){
                 INSTALL_SCRIPT=$(echo "sudo pacman -S --noconfirm --needed $PACKAGE ")            
                 func_install "$PACKAGE" "$INSTALL_SCRIPT"
             fi
-    done < regular_packages.txt
+    done < packages_base.txt
 
     while IFS= read -r PACKAGE
         do
@@ -90,7 +90,7 @@ function install_packages(){
                 INSTALL_SCRIPT=$(echo "yay -S --noconfirm --needed $PACKAGE ")
                 func_install "$PACKAGE" "$INSTALL_SCRIPT"        
             fi
-    done < aur_packages.txt    
+    done < packages_aur.txt    
 }
 
 
