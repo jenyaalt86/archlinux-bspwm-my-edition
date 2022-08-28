@@ -15,7 +15,7 @@ function func_install() {
 	else
         tput setaf 3
         echo "###############################################################################"
-        echo ":: Installing package "  $1 
+        echo ":: Installing package " $1 
         echo "###############################################################################"
         tput sgr0
         $2

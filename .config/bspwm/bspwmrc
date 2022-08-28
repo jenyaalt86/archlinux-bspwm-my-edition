@@ -30,7 +30,7 @@ sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 picom --config ~/.config/picom.conf &
 
 # Set display from arandr
-~/.screenlayout/layout.sh
+bash ~/.screenlayout/layout.sh
 
 # Polybar
 ~/.config/polybar/launch.sh
