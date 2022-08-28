@@ -118,8 +118,8 @@ function copy_config_files() {
     sudo mkdir -p /usr/share/fonts/TTF/
     sudo cp -R ./fonts/* /usr/share/fonts/TTF/
 
-    echo "Config IBUS"
-    sudo cp -R environment /etc/environment        
+    # echo "Config IBUS"
+    # sudo cp -R environment /etc/environment        
 
     echo "Setting up Resolution:"
     sudo cp -R .screenlayout/ ~/
