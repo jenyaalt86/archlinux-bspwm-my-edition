@@ -107,14 +107,18 @@ function post_install_config() {
 
 
 function copy_config_files() {
-    echo "Copy configuration files:"
-    CURRENT_DIR=".config/*"
+    
+    CURRENT_DIR=".config/."
     TARGET_DIR="~/.config/"
-    mkdir -p $TARGET_DIR
-    cp -R $CURRENT_DIR $TARGET_DIR
 
-    chmod -R +x ~/.config/bspwm
-    chmod -R +x ~/.config/polybar
+    sudo mkdir -p $TARGET_DIR
+
+    echo "Copy configuration files:"
+    sudo cp -R $CURRENT_DIR $TARGET_DIR
+
+    echo "Setting up permissions:"
+    sudo chmod -R +x ~/.config/bspwm
+    sudo chmod -R +x ~/.config/polybar
 
     echo "Copy fonts:"
     sudo mkdir -p /usr/share/fonts/TTF/
@@ -122,6 +126,14 @@ function copy_config_files() {
 
     echo "Config IBUS"
     sudo cp -R .environment /etc/environment        
+
+    echo "Setting up Resolution:"
+    sudo 'cp .screenlayout/.' '/home/jenyaalt86'
+
+    echo "Setting up wallpaper:"
+    sodo mkdir -p '/home/jenyaalt86/wallpapers'
+    sudo 'cp .wallpapers/.' '/home/jenyaalt86/wallpapers'
+
 }
 
 
