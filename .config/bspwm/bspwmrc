@@ -21,34 +21,39 @@ bspc config active_border_color     "#444b6a"
 #
 
 # Kill if already running
-killall -9 picom sxhkd dunst ksuperkey volumeicon
+killall -9 picom sxhkd dunst ksuperkey volumeicon blueberry-tray nitrogen
 
-# sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd &
+# Lauch keybindings daemon
+run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 # start compositor
-picom --config $HOME/.config/picom.conf &
+picom --config ~/.config/picom.conf &
 
 # Set display from arandr
-bash $HOME/.screenlayout/layout.sh
+bash ~/.screenlayout/layout.sh
 
 # Polybar
-$HOME/.config/polybar/launch.sh
+~/.config/polybar/launch.sh
 
 # polkit agent
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+if [[ ! `pidof xfce-polkit` ]]; then
+	/usr/lib/xfce-polkit/xfce-polkit &
+fi
 
 # Restore wallpaper
 nitrogen --restore &
 
 # Network manager
-nm-applet &
+run nm-applet &
 
 # Volumeicon
-volumeicon &
+run volumeicon &
 
 # numlockx
 numlockx on &
+
+# bluetooth
+blueberry-tray &
 
 # Launch notification daemon
 dunst -config $HOME/.config/dunstrc &

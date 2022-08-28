@@ -107,14 +107,8 @@ function post_install_config() {
 
 
 function copy_config_files() {
-    
-    CURRENT_DIR=".config/."
-    TARGET_DIR="~/.config/"
-
-    sudo mkdir -p $TARGET_DIR
-
     echo "Copy configuration files:"
-    sudo cp -R $CURRENT_DIR $TARGET_DIR
+    sudo cp -R .config ~/
 
     echo "Setting up permissions:"
     sudo chmod -R +x ~/.config/bspwm
@@ -125,14 +119,13 @@ function copy_config_files() {
     sudo cp -R ./fonts/* /usr/share/fonts/TTF/
 
     echo "Config IBUS"
-    sudo cp -R .environment /etc/environment        
+    sudo cp -R environment /etc/environment        
 
     echo "Setting up Resolution:"
-    sudo 'cp .screenlayout/.' '/home/jenyaalt86'
+    sudo cp -R .screenlayout/ ~/
 
     echo "Setting up wallpaper:"
-    sodo mkdir -p '/home/jenyaalt86/wallpapers'
-    sudo 'cp .wallpapers/.' '/home/jenyaalt86/wallpapers'
+    sudo cp wallpaper.jpg /home/jenyaalt
 
 }
 

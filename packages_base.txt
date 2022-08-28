@@ -26,6 +26,7 @@ bash-completion
 linux-headers
 numlockx
 volumeicon
+xdg-user-dirs
 
 # THEME
 adapta-gtk-theme
@@ -42,6 +43,7 @@ thunar-volman
 thunar-archive-plugin
 thunar-media-tags-plugin
 file-roller
+udiskie 
 
 # NETWORK
 networkmanager
