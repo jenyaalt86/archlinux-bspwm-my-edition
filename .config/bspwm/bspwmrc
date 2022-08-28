@@ -58,9 +58,12 @@ blueberry-tray &
 # Launch notification daemon
 dunst -config $HOME/.config/dunstrc &
 
+# thunar daemon 
+thunar --daemon &
+
+
 # fix cusrsor
 xsetroot -cursor_name left_ptr
-
 
 # Enable Super Keys For Menu
 ksuperkey -e 'Super_L=Alt_L|F1' &

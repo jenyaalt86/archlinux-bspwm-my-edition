@@ -44,6 +44,8 @@ thunar-archive-plugin
 thunar-media-tags-plugin
 file-roller
 udiskie 
+gvfs
+gvfs-mtp
 
 # NETWORK
 networkmanager
