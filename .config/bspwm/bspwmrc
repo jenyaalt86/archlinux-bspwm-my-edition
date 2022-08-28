@@ -24,13 +24,13 @@ bspc config active_border_color     "#444b6a"
 killall -9 picom sxhkd dunst ksuperkey volumeicon blueberry-tray nitrogen
 
 # Lauch keybindings daemon
-run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 # start compositor
 picom --config ~/.config/picom.conf &
 
 # Set display from arandr
-bash ~/.screenlayout/layout.sh
+~/.screenlayout/layout.sh
 
 # Polybar
 ~/.config/polybar/launch.sh
@@ -44,10 +44,10 @@ fi
 nitrogen --restore &
 
 # Network manager
-run nm-applet &
+nm-applet &
 
 # Volumeicon
-run volumeicon &
+volumeicon &
 
 # numlockx
 numlockx on &
